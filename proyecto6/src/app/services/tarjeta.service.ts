@@ -21,4 +21,16 @@ export class TarjetaService {
   eliminarTarjeta(id: string): Promise<any> {
     return this.firestore.collection('tarjetas').doc(id).delete();
   }
+
+  actualizarTarjeta(id: string, tarjeta:any): Promise<any> {
+    return this.firestore.collection('tarjetas').doc(id).update(tarjeta);
+  }
+
+  agregarTarjetaEdit(tarjeta:TarjetaCredito){
+    return this.tarjetaEdit.next(tarjeta);
+  }
+
+  getTarjetaEdit(): Observable<any>{
+    return this.tarjetaEdit.asObservable();
+  }
 }
