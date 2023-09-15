@@ -1,1 +1,46 @@
-<p>crear-tarjeta works!</p>
+<div class="card">
+    <div class="card-body">
+        <h5 class="titulo mb-3">
+            {{titulo | uppercase}}
+            <div class="spinner-border float-end" role="status">
+                <span class="visually-hidden">
+                    Cargando...
+                </span>
+            </div>
+        </h5>
+        <form>
+            <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text">
+                    <i class="fas fa-user-circle"></i>
+                </span>
+                <input formControlName="titular" placeholder="titular" type="text" class="form-control">
+            </div>
+
+            <div class="input-group input-group-lg mb-3">
+                <span class="input-group-text">
+                    <i class="fas fa-credit-card"></i>
+                </span>
+                <input formControlName="numeroTarjeta" placeholder="numeroTarjeta" type="text" class="form-control">
+            </div>
+
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="input-group input-group-lg mb-3">
+                        <span class="input-group-text">
+                            <i class="fas fa-calendar-alt"></i>
+                        </span>
+                        <input formControlName="fechaExpiracion" placeholder="fechaExpiracion" type="date" class="form-control">
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="input-group input-group-lg mb-3">
+                        <span class="input-group-text">
+                            <i class="fas fa-key"></i>
+                        </span>
+                        <input formControlName="cvv" placeholder="cvv" type="password" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
